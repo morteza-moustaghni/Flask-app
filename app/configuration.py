@@ -8,7 +8,7 @@ class Config(object):
 	"""
 	Configuration base, for all environments.
 	"""
-	DEBUG = False
+	DEBUG = True
 	TESTING = False
 	DATABASE_URI = 'sqlite:///application.db'
 	BOOTSTRAP_FONTAWESOME = True
