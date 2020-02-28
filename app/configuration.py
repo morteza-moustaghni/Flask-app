@@ -10,7 +10,7 @@ class Config(object):
 	"""
 	DEBUG = True
 	TESTING = False
-	DATABASE_URI = 'sqlite:///application.db'
+	DATABASE_URI = 'mysql+pymysql://PythonMySQL:test123@localhost/python_test_1'
 	BOOTSTRAP_FONTAWESOME = True
 	SECRET_KEY = "MINHACHAVESECRETA"
 	CSRF_ENABLED = True
