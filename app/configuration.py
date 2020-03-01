@@ -3,6 +3,8 @@
 Python Aplication Template
 Licence: GPLv3
 """
+import sys
+
 
 class Config(object):
 	"""
@@ -20,7 +22,7 @@ class Config(object):
 	#RECAPTCHA_PRIVATE_KEY = "6LffFNwSAAAAAO7UURCGI7qQ811SOSZlgU69rvv7"
 
 class ProductionConfig(Config):
-	from instance/config.py import DATABASE_URI
+	import instance.config.py
 
 class DevelopmentConfig(Config):
 	DEBUG = True
