@@ -7,7 +7,7 @@
 env
 
 # Instance files
-instance/*
+app/instance/*
 
 # Packages
 *.egg
