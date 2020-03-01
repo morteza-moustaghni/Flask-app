@@ -6,6 +6,9 @@
 #virtualenv
 env
 
+# Instance files
+instance/*
+
 # Packages
 *.egg
 *.egg-info

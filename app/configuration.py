@@ -10,7 +10,7 @@ class Config(object):
 	"""
 	DEBUG = True
 	TESTING = False
-	DATABASE_URI = 'mysql+pymysql://PythonMySQL:test123@localhost/python_test_1'
+	DATABASE_URI = 'sqlite//'
 	BOOTSTRAP_FONTAWESOME = True
 	SECRET_KEY = "somethingsecret"
 	CSRF_ENABLED = True
@@ -20,10 +20,11 @@ class Config(object):
 	#RECAPTCHA_PRIVATE_KEY = "6LffFNwSAAAAAO7UURCGI7qQ811SOSZlgU69rvv7"
 
 class ProductionConfig(Config):
-	DATABASE_URI = 'mysql://user@localhost/foo'
+	import instance/config.py
 
 class DevelopmentConfig(Config):
 	DEBUG = True
+	DATABASE_URI = 'sqlite:///application.db'
 
 class TestingConfig(Config):
 	TESTING = True
