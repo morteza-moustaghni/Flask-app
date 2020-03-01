@@ -12,7 +12,7 @@ class Config(object):
 	TESTING = False
 	DATABASE_URI = 'mysql+pymysql://PythonMySQL:test123@localhost/python_test_1'
 	BOOTSTRAP_FONTAWESOME = True
-	SECRET_KEY = "MINHACHAVESECRETA"
+	SECRET_KEY = "somethingsecret"
 	CSRF_ENABLED = True
 
 	#Get your reCaptche key on: https://www.google.com/recaptcha/admin/create
