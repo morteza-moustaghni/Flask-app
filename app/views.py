@@ -58,6 +58,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         login_user(g.user)
+        return render_template(url_for('/'))
 
     return render_template('login.html', 
         title = 'Sign In',
