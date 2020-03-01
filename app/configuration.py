@@ -25,6 +25,7 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
 	DEBUG = True
 	DATABASE_URI = 'sqlite:///application.db'
+	print("dev")
 
 class TestingConfig(Config):
 	TESTING = True
