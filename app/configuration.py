@@ -20,7 +20,7 @@ class Config(object):
 	#RECAPTCHA_PRIVATE_KEY = "6LffFNwSAAAAAO7UURCGI7qQ811SOSZlgU69rvv7"
 
 class ProductionConfig(Config):
-	import instance/config.py
+	from instance/config.py import DATABASE_URI
 
 class DevelopmentConfig(Config):
 	DEBUG = True
