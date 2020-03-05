@@ -10,7 +10,7 @@ class Config(object):
 	"""
 	DEBUG = True
 	TESTING = False
-	DATABASE_URI = 'sqlite///application.db'
+	DATABASE_URI = 'sqlite///tmp/app.db'
 	BOOTSTRAP_FONTAWESOME = True
 	SECRET_KEY = "somethingsecret"
 	CSRF_ENABLED = True
