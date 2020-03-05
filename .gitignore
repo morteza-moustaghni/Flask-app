@@ -7,7 +7,7 @@
 env
 
 # Instance files
-app/instance/*
+app/instance/config.py
 
 # Packages
 *.egg
