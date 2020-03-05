@@ -9,7 +9,6 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_pymongo import PyMongo
 from flask_login import LoginManager
-from sqlalchemy import create_engine
 
 app = Flask(__name__)
 
@@ -20,7 +19,6 @@ app.config.from_object('app.configuration.DevelopmentConfig')
 
 bs = Bootstrap(app) #flask-bootstrap
 db = SQLAlchemy(app) #flask-sqlalchemy
-engine = create_engine(app.configuration.DATABASE_URI)
 
 lm = LoginManager()
 lm.setup_app(app)
