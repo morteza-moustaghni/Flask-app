@@ -6,11 +6,9 @@ Licence: GPLv3
 
 from app import db
 
-class ModelExample(db.Model):
+class TestModel(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
-	title = db.Column(db.String(250))
-	content = db.Column(db.Text)
-	date = db.Column(db.DateTime)
+	name = db.Column(db.String(250))
 
 
 class User(db.Model):
