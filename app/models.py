@@ -43,6 +43,7 @@ def init_db():
     new_user = TestModel(name='Morteza')
     db.session.add(new_user)
     db.session.commit()
+    print("first user created")
 
 if __name__ == '__main__':
     init_db()
