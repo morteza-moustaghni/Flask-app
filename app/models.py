@@ -36,3 +36,4 @@ class User(db.Model):
         return '<User %r>' % (self.nickname)
 
 db.__init__(app)
+db.create_all()
