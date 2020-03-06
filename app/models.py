@@ -7,6 +7,8 @@ Licence: GPLv3
 from app import db
 
 class TestModel(db.Model):
+    __tablename__ = "Table1"
+    
 	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250))
 
@@ -33,3 +35,5 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
+
+db.__init__(app)
