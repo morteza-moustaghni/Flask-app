@@ -4,7 +4,7 @@ Python Aplication Template
 Licence: GPLv3
 """
 
-from app import db
+from app import app, db
 
 class TestModel(db.Model):
     __tablename__ = "Table1"
