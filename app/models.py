@@ -10,6 +10,8 @@ class TestModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(250))
 
+    def __init__(self, name):
+        self.name = name
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key = True)
@@ -38,7 +40,7 @@ def init_db():
     db.create_all()
 
     # Create a test user
-    new_user = TestModel("morteza")
+    new_user = TestModel(name='Morteza')
     db.session.add(new_user)
     db.session.commit()
 
