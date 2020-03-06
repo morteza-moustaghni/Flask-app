@@ -34,5 +34,13 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
-db.__init__(app)
-db.create_all()
+def init_db():
+    db.create_all()
+
+    # Create a test user
+    new_user = TestModel("morteza")
+    db.session.add(new_user)
+    db.session.commit()
+
+if __name__ == '__main__':
+    init_db()
