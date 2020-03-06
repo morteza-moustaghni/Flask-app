@@ -8,7 +8,7 @@ from app import db
 
 class TestModel(db.Model):
     __tablename__ = "Table1"
-	id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String(250))
 
 
