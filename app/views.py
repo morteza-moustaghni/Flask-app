@@ -74,12 +74,13 @@ def newacc():
 
     form = NewAccountForm()
     if form.validate_on_submit():
-     db.create_all()
+    	print(form.name)
+     # db.create_all()
 
-     new_user = User(user=form.user, email=form.email, password=form.password)
-     db.session.add(new_user)
-     db.session.commit()
-     print(TestModel.query.all()[0].name)
+     # new_user = User(user=form.user, email=form.email, password=form.password)
+     # db.session.add(new_user)
+     # db.session.commit()
+     # print(TestModel.query.all()[0].name)
 
     return render_template('newacc.html', 
         title = 'Create new account',
