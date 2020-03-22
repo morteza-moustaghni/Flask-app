@@ -83,6 +83,7 @@ def newacc():
      	new_user = User(user=form.user.data, email=form.email.data, password=form.password.data)
      	db.session.add(new_user)
      	db.session.commit()
+     	return redirect(url_for('index'))
 
     return render_template('newacc.html', 
         title = 'Create new account',
