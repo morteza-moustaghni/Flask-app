@@ -77,7 +77,7 @@ def newacc():
     	print(form.user.data)
     	print(form.email.data)
     	db.create_all()
-     	new_user = User(user=form.user, email=form.email, password=form.password)
+     	new_user = User(user=form.user.data, email=form.email.data, password=form.password.data)
      	db.session.add(new_user)
      	db.session.commit()
 
