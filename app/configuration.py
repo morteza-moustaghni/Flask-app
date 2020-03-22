@@ -20,4 +20,4 @@ class Config(object):
 	#RECAPTCHA_PRIVATE_KEY = "6LffFNwSAAAAAO7UURCGI7qQ811SOSZlgU69rvv7"
 class DevelopmentConfig(Config):
 	DEBUG = True
-	print("dev")
+	print("dev config")
