@@ -6,7 +6,7 @@ Licence: GPLv3
 
 from flask import url_for, redirect, render_template, flash, g, session
 from flask_login import login_user, logout_user, current_user, login_required
-from app import app, lm
+from app import app, lm, db
 from forms import ExampleForm, LoginForm
 from models import User
 
@@ -67,5 +67,23 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
+@app.route('/newacc/', methods = ['GET', 'POST'])
+def newacc():
+
+    form = NewAccountForm()
+    if form.validate_on_submit():
+     db.create_all()
+
+     new_user = User(user=form.user, email=form.email, password=form.password)
+     db.session.add(new_user)
+     db.session.commit()
+     print("user %s created", new_user.user)
+#     print(TestModel.query.all()[0].name)
+
+    return render_template('newacc.html', 
+        title = 'Create new account',
+        form = form)
 
     # ===================
