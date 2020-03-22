@@ -47,10 +47,7 @@ def view(id):
 
 @app.before_request
 def before_request():
-	if current_user.is_authenticated():
-		g.user = current_user
-	else:
-		g.user = None
+	g.user = current_user
 
 @lm.user_loader
 def load_user(id):
@@ -62,8 +59,8 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        login_user(form.user)
-        print("User " + str(g.user.user) + " logged in.")
+        login_user(g.user)
+        # print("User " + str(g.user.user) + " logged in.")
         return redirect(url_for('index'))
 
     return render_template('login.html', 
