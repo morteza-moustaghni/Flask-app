@@ -26,7 +26,7 @@ lm.login_view = 'login'
 
 print("init")
 
-from app impSort views, models
+from app import views, models
 # from app.models import TestModel
 
 # def init_db():
