@@ -12,11 +12,10 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'].from_pyfile('instance/config.py')
+app.config.from_pyfile('instance/config.py')
 #Configuration of application, see configuration.py, choose one and uncomment.
 #app.config.from_object('configuration.ProductionConfig')
 app.config.from_object('app.configuration.DevelopmentConfig')
-#app.config.from_pyfile('instance/config.py')
 #app.config.from_object('configuration.TestingConfig')
 
 bs = Bootstrap(app) #flask-bootstrap
