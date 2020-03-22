@@ -26,7 +26,8 @@ lm.login_view = 'login'
 
 print("init")
 
-
+from app import views, models
+from app.models import TestModel
 
 def init_db():
     db.create_all()
@@ -38,5 +39,3 @@ def init_db():
     print("first user created")
 init_db()
 
-from app import views, models
-from app.models import TestModel
