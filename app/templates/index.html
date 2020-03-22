@@ -5,6 +5,11 @@
 {%block main_content%}
 
 	<h1>Index</h1>
+	{%if is user_loggedIn%}
+	<h4>{{g.user}}</h4>
+	{%endif%}
+
+
 	<div class="row">
 		<div class="span4">
 			<img src="http://placehold.it/360x200" class="img-polaroid">
