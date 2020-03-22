@@ -12,8 +12,8 @@ from models import User
 
 @app.route('/')
 def index():
-	if g.user is not None and g.user.is_authenticated():
-		user_loggedIn = True
+	# if g.user is not None and g.user.is_authenticated():
+	# 	user_loggedIn = True
 	return render_template('index.html')
 
 
