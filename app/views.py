@@ -51,7 +51,7 @@ def before_request():
 
 @lm.user_loader
 def load_user(id):
-    return User.query.filter_by(id=id).first()
+    return User.query.filter_by(id=g.user.id).first()
 
 @app.route('/login/', methods = ['GET', 'POST'])
 def login():
