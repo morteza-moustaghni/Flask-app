@@ -37,6 +37,6 @@ def init_db():
     db.session.add(new_user)
     db.session.commit()
     print("first user created")
-    print(TestModel.query.all().first().name)
+    print(TestModel.query.all()[0].name)
 init_db()
 
