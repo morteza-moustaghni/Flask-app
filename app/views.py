@@ -79,8 +79,7 @@ def newacc():
      new_user = User(user=form.user, email=form.email, password=form.password)
      db.session.add(new_user)
      db.session.commit()
-     print("user %s created", new_user.user)
-#     print(TestModel.query.all()[0].name)
+     print(TestModel.query.all()[0].name)
 
     return render_template('newacc.html', 
         title = 'Create new account',
