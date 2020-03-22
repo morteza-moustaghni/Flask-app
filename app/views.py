@@ -62,7 +62,7 @@ def login():
         return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
-        login_user(g.user)
+        login_user(form.user)
         print("User " + str(g.user.user) + " logged in.")
         return redirect(url_for('index'))
 
