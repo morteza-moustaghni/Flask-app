@@ -26,3 +26,11 @@ lm.login_view = 'login'
 
 from app import views, models
 
+def init_db():
+    db.create_all()
+
+    # Create a test user
+    new_user = TestModel(name='Morteza')
+    db.session.add(new_user)
+    db.session.commit()
+    print("first user created")
