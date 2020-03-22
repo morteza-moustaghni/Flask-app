@@ -26,17 +26,17 @@ lm.login_view = 'login'
 
 print("init")
 
-from app import views, models
-from app.models import TestModel
+from app impSort views, models
+# from app.models import TestModel
 
-def init_db():
-    db.create_all()
+# def init_db():
+#     db.create_all()
 
-    # Create a test user
-    new_user = TestModel(name='Morteza')
-    db.session.add(new_user)
-    db.session.commit()
-    print("first user created")
-    print(TestModel.query.all()[0].name)
-init_db()
+#     # Create a test user
+#     new_user = TestModel(name='Morteza')
+#     db.session.add(new_user)
+#     db.session.commit()
+#     print("first user created")
+#     print(TestModel.query.all()[0].name)
+# init_db()
 
