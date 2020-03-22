@@ -12,6 +12,6 @@ class LoginForm(Form):
 	password = PasswordField(u'Password', validators = [InputRequired()])
 
 class NewAccountForm(Form):
-	email = EmailField(u'Email', validators = [InputRequired(), Email()])
+	email = TextField(u'Email', validators = [InputRequired(), Email()])
 	user = TextField(u'Username', validators = [InputRequired()])
 	password = PasswordField(u'Password', validators = [InputRequired()])
