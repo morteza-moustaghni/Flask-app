@@ -47,11 +47,14 @@ def view(id):
 
 @app.before_request
 def before_request():
-    g.user = current_user
+	if current_user.is_authenticated():
+		g.user = current_user.get_id()
+	else:
+		g.user = None
 
 @lm.user_loader
 def load_user(id):
-    return User.query.filter_by(id=g.id).first()
+    return User.query.filter_by(id=g.user).first()
 
 @app.route('/login/', methods = ['GET', 'POST'])
 def login():
