@@ -39,3 +39,4 @@ def init_db():
 init_db()
 
 from app import views, models
+from app.models import TestModel
