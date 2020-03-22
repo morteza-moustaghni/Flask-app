@@ -51,7 +51,7 @@ def before_request():
 
 @lm.user_loader
 def load_user(id):
-    return User.query.filter_by(int(id)).first()
+    return User.query.filter_by(id=int(id)).first()
 
 @app.route('/login/', methods = ['GET', 'POST'])
 def login():
@@ -60,7 +60,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         login_user(g.user)
-        print("User " + str(g.user.id) + " logged in.")
+        print("User " + str(g.user) + " logged in.")
         return redirect(url_for('index'))
 
     return render_template('login.html', 
