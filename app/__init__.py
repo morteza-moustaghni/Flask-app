@@ -24,6 +24,8 @@ lm = LoginManager()
 lm.setup_app(app)
 lm.login_view = 'login'
 
+print("init")
+
 from app import views, models
 
 def init_db():
