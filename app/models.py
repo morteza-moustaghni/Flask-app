@@ -1,7 +1,7 @@
 
 from app import app, db
 
-print("models")
+
 
 class TestModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -34,3 +34,4 @@ class User(db.Model):
         return '<User %r>' % (self.nickname)
 
 
+print("models")
