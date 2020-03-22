@@ -74,7 +74,7 @@ def newacc():
 
     form = NewAccountForm()
     if form.validate_on_submit():
-    	print(form.name.data)
+    	print(form.user.data)
      # db.create_all()
 
      # new_user = User(user=form.user, email=form.email, password=form.password)
