@@ -60,6 +60,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         login_user(g.user)
+        print("User " + g.user + " logged in.")
         return redirect(url_for('index'))
 
     return render_template('login.html', 
