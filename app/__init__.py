@@ -20,7 +20,6 @@ app.config.from_pyfile('instance/config.py')
 
 bs = Bootstrap(app) #flask-bootstrap
 db = SQLAlchemy(app) #flask-sqlalchemy
-db.init_db()
 
 lm = LoginManager()
 lm.setup_app(app)
